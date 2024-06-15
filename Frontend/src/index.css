@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    user-select: none;
+    box-sizing: border-box;
+    transition: all ease 0.25s;
+}
+
+.no-scroll {
+    scrollbar-width: none;
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.bf:hover::after {
+    box-shadow: -7px 6px 1px 1px white;
+}
+
+
+.bf:hover::before {
+    box-shadow: 7px 6px 1px 1px white;
+   
+}
+
+.bf::before {
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent;
+    position: absolute;
+    left: -16px;
+    z-index: 900;
+}
+
+.bf::after {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent;
+    position: absolute;
+    right: -16px;
+    z-index: 900;
+
+}
